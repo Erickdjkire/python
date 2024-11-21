@@ -1,0 +1,35 @@
+# Escriba un programa que pida primero un número par y a continuación un numero impar
+#  (positivos o negativos). En caso de que uno o los dos valores no sean correctos, se mostrarán uno o dos avisos.
+error = 0
+switch = "on"
+while(switch == "on"):
+    try:
+        print("\n\n verificar número par".upper())
+
+        
+        par = int(input("ingrese un número par: ".title()))
+        
+        if par % 2 != 0:
+            print(f"error. usted ingresó '{par}', y no es número par.")
+            error +=1
+            print (f"ojo. usted ha cometido {error}, errores.")
+            if error == 2:
+                error = 0
+
+        
+
+        if par % 2 == 0:
+            impar = int(input("ingrese un número impar: ".title()))
+            if impar % 2 == 0:
+                print(f" lo siento. pero '{impar}', no es impar.")
+                error +=1
+                print(f"ojo. usted ha cometido {error}, errores")
+
+            if error == 2:
+                error = 0
+
+
+
+
+    except:
+        print("ERROR:")
